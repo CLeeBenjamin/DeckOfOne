@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Card View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CardViewController" customModule="DeckOfOne" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M0u-2u-1Ez">
+                                <rect key="frame" x="153" y="554" width="68" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.75294117650000003" blue="0.3803921569" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Draw"/>
+                                <connections>
+                                    <action selector="drawButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W8N-OX-f7b"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7FU-nJ-43K">
+                                <rect key="frame" x="79" y="175" width="216" height="316"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="M0u-2u-1Ez" secondAttribute="bottom" constant="83" id="HGT-Yh-pv2"/>
+                            <constraint firstItem="M0u-2u-1Ez" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="153" id="Y3J-zt-ufg"/>
+                            <constraint firstItem="M0u-2u-1Ez" firstAttribute="top" secondItem="7FU-nJ-43K" secondAttribute="bottom" constant="63" id="Yfc-aX-7eR"/>
+                            <constraint firstItem="M0u-2u-1Ez" firstAttribute="top" secondItem="7FU-nJ-43K" secondAttribute="bottom" constant="63" id="ePM-TU-MQC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7FU-nJ-43K" secondAttribute="trailing" constant="80" id="eXd-s5-ncv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="M0u-2u-1Ez" secondAttribute="trailing" constant="154" id="gdu-pq-bfd"/>
+                            <constraint firstItem="7FU-nJ-43K" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="79" id="vn8-op-4Vb"/>
+                            <constraint firstItem="7FU-nJ-43K" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="155" id="xWG-PX-I9q"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="cardImageView" destination="7FU-nJ-43K" id="iOG-gw-fbe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
+        </scene>
+    </scenes>
+</document>

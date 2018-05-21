@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		71AF45B020B3263A00971520 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71AF45AF20B3263A00971520 /* AppDelegate.swift */; };
-		71AF45B220B3263A00971520 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71AF45B120B3263A00971520 /* ViewController.swift */; };
 		71AF45B520B3263A00971520 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71AF45B320B3263A00971520 /* Main.storyboard */; };
 		71AF45B720B3263C00971520 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71AF45B620B3263C00971520 /* Assets.xcassets */; };
 		71AF45BA20B3263C00971520 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71AF45B820B3263C00971520 /* LaunchScreen.storyboard */; };
+		71AF45C420B32BE200971520 /* Cards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71AF45C320B32BE200971520 /* Cards.swift */; };
+		71AF45CE20B358D000971520 /* CardsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71AF45CD20B358D000971520 /* CardsController.swift */; };
+		71AF45D020B3590200971520 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71AF45CF20B3590200971520 /* CardViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		71AF45AC20B3263A00971520 /* DeckOfOne.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeckOfOne.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71AF45AF20B3263A00971520 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		71AF45B120B3263A00971520 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		71AF45B420B3263A00971520 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		71AF45B620B3263C00971520 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		71AF45B920B3263C00971520 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		71AF45BB20B3263C00971520 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		71AF45C320B32BE200971520 /* Cards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cards.swift; sourceTree = "<group>"; };
+		71AF45CD20B358D000971520 /* CardsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsController.swift; sourceTree = "<group>"; };
+		71AF45CF20B3590200971520 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +58,56 @@
 		71AF45AE20B3263A00971520 /* DeckOfOne */ = {
 			isa = PBXGroup;
 			children = (
+				71AF45C920B32FB800971520 /* Controller */,
+				71AF45C820B32F5F00971520 /* View */,
+				71AF45C220B32BCE00971520 /* Model */,
+				71AF45C120B32A7D00971520 /* Resources */,
+			);
+			path = DeckOfOne;
+			sourceTree = "<group>";
+		};
+		71AF45C120B32A7D00971520 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				71AF45AF20B3263A00971520 /* AppDelegate.swift */,
-				71AF45B120B3263A00971520 /* ViewController.swift */,
-				71AF45B320B3263A00971520 /* Main.storyboard */,
 				71AF45B620B3263C00971520 /* Assets.xcassets */,
 				71AF45B820B3263C00971520 /* LaunchScreen.storyboard */,
 				71AF45BB20B3263C00971520 /* Info.plist */,
 			);
-			path = DeckOfOne;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		71AF45C220B32BCE00971520 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				71AF45C720B32F3500971520 /* Model Controller */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		71AF45C720B32F3500971520 /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				71AF45CD20B358D000971520 /* CardsController.swift */,
+				71AF45C320B32BE200971520 /* Cards.swift */,
+			);
+			path = "Model Controller";
+			sourceTree = "<group>";
+		};
+		71AF45C820B32F5F00971520 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				71AF45B320B3263A00971520 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		71AF45C920B32FB800971520 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				71AF45CF20B3590200971520 /* CardViewController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +181,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71AF45B220B3263A00971520 /* ViewController.swift in Sources */,
+				71AF45D020B3590200971520 /* CardViewController.swift in Sources */,
+				71AF45CE20B358D000971520 /* CardsController.swift in Sources */,
 				71AF45B020B3263A00971520 /* AppDelegate.swift in Sources */,
+				71AF45C420B32BE200971520 /* Cards.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,7 +330,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = DeckOfOne/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/DeckOfOne/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -301,7 +349,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = DeckOfOne/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/DeckOfOne/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

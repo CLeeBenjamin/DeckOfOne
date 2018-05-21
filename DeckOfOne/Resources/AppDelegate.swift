@@ -15,7 +15,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        CardController.draw(numberOfCards: 4) { (cards) in
+            guard let cards = cards else { return }
+           let firstCard = cards[0]
+            CardController.fetchImage(withUrlString: firstCard.image, completion: { (image) in
+                guard let image = image else { return }
+                print(image)
+        })
+    }
         return true
     }
 
